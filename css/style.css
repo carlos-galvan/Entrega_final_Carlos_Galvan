@@ -3,7 +3,6 @@
     padding: 0;
     color: #ffffff;
     background-color: rgb(24, 24, 24);
-    /* background-image: url(../images/background-image.jpg); */
     box-sizing: border-box;
 }
 
@@ -25,7 +24,7 @@
     src: url('../fonts/MontserratAlternates-SemiBoldItalic.ttf');
 }
 
-/******************************* TITLES & TEXT ****************************/
+/******************************* TITULOS Y TEXTO + MEDIA QUERIES ****************************/
 
 h1 {
     margin-top: 13vh;
@@ -65,26 +64,86 @@ p {
 }
 
 a {
+    width: 15vw;
     font-size: 2.2em;
-    text-decoration: none;
 }
 
-/******************************* MENU NAV ****************************/
+@media only screen and (min-width:1134px)and (max-width:1247px) {
+    h1 {
+        font-size: 9.5em;
+    }
 
-.navbar-brand img {
-    border: rgb(90, 90, 90) solid 2px;
+    h3 {
+        margin-top: 14vh;
+    }
 }
 
-.navbar-nav li {
-    padding: 0 4% 0 4%;
+@media only screen and (min-width:1024px) and (max-width:1134px) {
+    h1 {
+        font-size: 8em;
+        margin-top: 14vh;
+    }
+
+    h3 {
+        margin-top: 15vh;
+    }
 }
 
-.navbar-nav li a {
-    font-weight: 500;
-    font-size: 2.5em;
+@media only screen and (min-width:793px) and (max-width:1024px) {
+    h1 {
+        font-size: 6em;
+        margin-top: 15vh;
+    }
+
+    h2 {
+        font-size: 4em;
+    }
+
+    h3 {
+        margin-top: 16vh;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:793px) {
+    h1 {
+        font-size: 4em;
+        margin-top: 17vh;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 2.2em;
+        margin-top: 17vh;
+    }
+
+    h4 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+/******************************* MENU NAV *******************************/
+
+.nav-link {
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    transform: scale(1.15);
 }
 
 /******************************* INDEX.HTML ****************************/
+
 
 .carousel {
     margin-top: 2%;
@@ -95,11 +154,17 @@ a {
     border: lemonchiffon solid 5px;
 }
 
+@media screen and (min-width:481px) and (max-width:793px) {
+    .carousel {
+        margin-top: 4%;
+    }
+}
+
 /******************************* FOOTER ****************************/
 
 .footer {
     width: 100%;
-    height: 40vh;
+    height: auto;
     display: flex;
     flex-wrap: row wrap;
     justify-content: space-evenly;
@@ -113,6 +178,11 @@ a {
     text-align: center;
 }
 
+.footer_card a {
+    font-size: 1.2em;
+    color: lemonchiffon;
+}
+
 .footer_card p {
     font-size: 1.5em;
     font-family: Verdana, sans-serif;
@@ -120,34 +190,86 @@ a {
     color: rgb(168, 168, 168);
 }
 
-/******************************* IFRAME ****************************/
+@media screen and (min-width:481px) and (max-width:793px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_card {
+        width: 100%;
+    }
+}
+
+/******************************* FOOTER - UBICACION ****************************/
 
 .iframe {
-    width: 60%;
+    width: 70%;
     height: 70%;
+    transition: all 0.3s ;
 }
 
-.footer_card ul li {
-    display: inline-flex;
+.iframe:hover {
+    transform: scale(1.15);
+}
+
+/******************************* FOOTER - AYUDA ****************************/
+
+.footer_card_ayuda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer_card_ayuda li {
     list-style-type: none;
     font-size: 1.3em;
-    color: rgb(152, 152, 152);
-    padding: 7px;
+    padding: 1%;
+    text-align: center;
+    transition: all 0.3s ;
 }
 
-/******************************* SOCIAL MEDIA ****************************/
+.footer_card_ayuda li:hover {
+    transform: scale(1.15);
+}
+/******************************* FOOTER - REDES ****************************/
 
-.social_media {
-    height: 50px;
-    padding-top: 15%;
+.footer_card_redes {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer_card_redes a img {
+    width: 60px;
+    transition: all 0.3s;
+}
+
+.footer_card_redes a img:hover {
+    transform: scale(1.25);
+}
+
+.social_media_top_icons {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
 }
 
-.social_media img {
-    width: 9%;
-    cursor: pointer;
+.social_media_bottom_icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width:481px) and (max-width:793px) {
+    .footer_card_redes {
+        width: 100%;
+        height: 120px;
+        margin-bottom: 10%;
+    }
+
+    .footer_card_redes a img {
+        width: 45px;
+    }
 }
 
 /******************************* COPYRIGHT ****************************/
@@ -166,10 +288,17 @@ a {
     margin: 0;
 }
 
+@media screen and (min-width:481px) and (max-width:793px) {
+    .copyright p {
+        font-size: 0.7em;
+
+    }
+}
+
 /******************************* WHATSAPP LOGO ****************************/
 
 .whatsapp img {
-    width: 3%;
+    width: 55px;
     background-color: transparent;
     object-fit: cover;
     position: fixed;
@@ -177,6 +306,18 @@ a {
     right: 15px;
     z-index: 1;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.whatsapp img:hover {
+    transform: scale(1.15);
+}
+
+@media screen and (min-width:481px) and (max-width:793px) {
+    .whatsapp img {
+        width: 45px;
+        bottom: 80px;
+    }
 }
 
 /******************************* EMPRESA.HTML ****************************/
@@ -214,9 +355,26 @@ a {
 }
 
 .empresa_card_right img {
-    width: 70%;
+    width: 80%;
+    object-fit: cover;
     border: lemonchiffon solid 7px;
     border-radius: 5%;
+}
+
+@media screen and (min-width:481px) and (max-width:920px) {
+    .empresa_card {
+        display: flex;
+        flex-flow: column;
+        margin-bottom: 5%;
+    }
+
+    .empresa_card_left {
+        width: 100%;
+    }
+
+    .empresa_card_right {
+        display: none;
+    }
 }
 
 /******************************* GALERIA ****************************/
@@ -228,17 +386,24 @@ a {
 
 .galeria_grid {
     width: 100%;
+    margin-bottom: 3%;
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(3,32vw)
+    grid-template-columns: repeat(3, 32vw)
 }
 
 .galeria_grid img {
+
     width: 90%;
     height: 95%;
     object-fit: cover;
     border: lemonchiffon solid 5px;
     border-radius: 10%;
+    transition: all 0.3s;
+}
+
+.galeria_grid img:hover {
+    transform: scale(1.10);
 }
 
 /*grid-row-start/grid-column-start/grid-row-end/grid-column-end*/
@@ -275,6 +440,42 @@ a {
     grid-area: 4/2/5/4;
 }
 
+@media only screen and (min-width:793px) and (max-width:1024px) {
+    .galeria_grid {
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:1024px) {
+    .galeria_grid {
+        margin-bottom: 7%;
+        grid-template-columns: repeat(2, 50vw)
+    }
+
+    /*grid-row-start/grid-column-start/grid-row-end/grid-column-end*/
+
+    .pic1 {
+        grid-area: 1/1/2/2;
+    }
+
+    .pic2 {
+        grid-area: 1/2/2/3;
+    }
+
+    .pic4 {
+        grid-area: 2/1/3/2;
+    }
+
+    .pic7 {
+        grid-area: 3/1/4/3;
+    }
+
+    .pic8 {
+        grid-area: 4/1/5/3;
+    }
+
+}
+
 /******************************* PRODUCTOS.HTML ****************************/
 
 .descripcion {
@@ -293,8 +494,7 @@ a {
 
 .productos__card {
     width: 30%;
-    border: lemonchiffon solid 4px;
-    border-radius: 8%;
+    border: lemonchiffon solid 2px;
     text-align: center;
     padding: 1%;
 }
@@ -304,6 +504,22 @@ a {
     object-fit: cover;
     padding-top: 2%;
     padding-bottom: 3%;
+}
+
+@media only screen and (min-width:481px) and (max-width:1024px) {
+    .productos {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        margin-bottom: 3%;
+    }
+
+    .productos__card {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 9%;
+        border: lemonchiffon solid 1px;
+    }
 }
 
 /******************************* NUTRICIONAL.HTML ****************************/
@@ -330,7 +546,13 @@ a {
     border-radius: 8%;
     margin-top: 4%;
     margin-bottom: 4%;
+    transition: all 0.3s;
 }
+
+.nutricional__card img:hover {
+    transform: scale(1.08);
+}
+
 
 .nutricional__card p {
     width: 90%;
@@ -342,9 +564,22 @@ table {
     text-align: center;
 }
 
-th, td {
+th,
+td {
     border-bottom: grey solid 1px;
     padding: 1%;
+}
+
+@media screen and (min-width:481px) and (max-width:793px) {
+    .nutricional {
+        display: flex;
+        flex-flow: column;
+        margin-bottom: 8%;
+    }
+        .nutricional__card {
+            width: 100%;
+            margin-top: 5%;
+        }
 }
 
 /******************************* PEDIDOS.HTML ****************************/
@@ -352,6 +587,7 @@ th, td {
 form {
     border: lemonchiffon solid 3px;
     border-radius: 3%;
+    margin-top: 2%;
     padding: 1%;
     width: 80%;
 }
@@ -362,7 +598,6 @@ form input {
     color: sandybrown;
     border: none;
     border-bottom: 2px solid #ffffff;
-    padding-bottom: 1%;
 }
 
 form textarea {
@@ -388,6 +623,11 @@ form label {
     border: rgb(95, 95, 95) 3px solid;
     border-radius: 25px;
     margin-top: 1%;
+    transition: all 0.3s;
+}
+
+#enviar:hover {
+    transform: scale(1.15);
 }
 
 #resetear {
@@ -398,12 +638,21 @@ form label {
     border: rgb(96, 96, 96) 3px solid;
     border-radius: 25px;
     margin-top: 1%;
+    transition: all 0.3s;
+}
+
+#resetear:hover {
+    transform: scale(1.15);
 }
 
 /******************************* MODO DE CONSERVACION ****************************/
 
+#modo_conservacion {
+    margin-top: 3%;
+}
+
 .instrucciones {
-    width: 45%;
+    width: 75%;
     display: flex;
     flex-flow: column;
     margin-bottom: 3%;
@@ -422,4 +671,3 @@ form label {
     height: auto;
     margin-bottom: 3%;
 }
-

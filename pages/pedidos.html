@@ -53,7 +53,7 @@
             <p class="descripcion">Realizá tu pedido utilizando el siguiente formulario</p>
 
             <!--FORMULARIO INICIA-->
-            <form class="mx-auto" name="form_pedidos" action="enviar.php" method="post" action="text/plain" >
+            <form class="mx-auto" name="" action="enviar.php" method="post" action="text/plain" >
                 <div>
                     <label for="nombre">Nombre y apellido</label>
                     <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
@@ -73,13 +73,12 @@
                 <div class="inputs d-flex justify-content-evenly">
                     <input id="enviar" type="submit" value="Enviar formulario">
                     <input id="resetear" type="reset" value="Resetar formulario">
-
                 </div>
             </form>
             <!--FORMULARIO FINALIZA-->
 
             <!--MODO DE CONSERVACIÓN INICIA-->
-            <h3>MODO DE CONSERVACION</h3>
+            <h3 id="modo_conservacion">MODO DE CONSERVACION</h3>
             <section class="instrucciones mx-auto">
                 <div class="instrucciones_card">
                     <img src="../Images/pedidos1.png" alt="freezer">
