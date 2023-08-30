@@ -53,7 +53,7 @@ h3 {
 }
 
 h4 {
-    font-family: carter;
+    font-family: montserrat;
     font-size: 2em;
     color: lemonchiffon;
 }
@@ -108,23 +108,23 @@ a {
     }
 }
 
-@media only screen and (min-width:481px) and (max-width:793px) {
+@media only screen and (min-width:320px) and (max-width:793px) {
     h1 {
-        font-size: 4em;
+        font-size: 3em;
         margin-top: 17vh;
     }
 
     h2 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     h3 {
-        font-size: 2.2em;
+        font-size: 1.8em;
         margin-top: 17vh;
     }
 
     h4 {
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
 
     p {
@@ -132,9 +132,10 @@ a {
     }
 }
 
-/******************************* MENU NAV *******************************/
+/******************************* NAVBAR *******************************/
 
 .nav-link {
+    text-align: center;
     transition: all 0.3s;
 }
 
@@ -142,8 +143,14 @@ a {
     transform: scale(1.15);
 }
 
-/******************************* INDEX.HTML ****************************/
+@media screen and (min-width:320px) and (max-width:793px) {
 
+    .navbar-brand img {
+        width: 80px !important;
+    }
+}
+
+/******************************* INDEX.HTML ****************************/
 
 .carousel {
     margin-top: 2%;
@@ -154,7 +161,7 @@ a {
     border: lemonchiffon solid 5px;
 }
 
-@media screen and (min-width:481px) and (max-width:793px) {
+@media screen and (min-width:320px) and (max-width:793px) {
     .carousel {
         margin-top: 4%;
     }
@@ -190,7 +197,7 @@ a {
     color: rgb(168, 168, 168);
 }
 
-@media screen and (min-width:481px) and (max-width:793px) {
+@media screen and (min-width:320px) and (max-width:793px) {
     .footer {
         display: flex;
         flex-direction: column;
@@ -198,6 +205,16 @@ a {
 
     .footer_card {
         width: 100%;
+    }
+
+    .footer_card a {
+        font-size: 1em;
+    }
+
+    .footer_card p {
+        font-size: 1.1em;
+        padding-top: 3%;
+
     }
 }
 
@@ -225,7 +242,7 @@ a {
     list-style-type: none;
     font-size: 1.3em;
     padding: 1%;
-    text-align: center;
+    /* text-align: center; */
     transition: all 0.3s ;
 }
 
@@ -260,15 +277,14 @@ a {
     justify-content: space-evenly;
 }
 
-@media screen and (min-width:481px) and (max-width:793px) {
+@media screen and (min-width:320px) and (max-width:793px) {
     .footer_card_redes {
         width: 100%;
         height: 120px;
-        margin-bottom: 10%;
     }
 
     .footer_card_redes a img {
-        width: 45px;
+        width: 35px;
     }
 }
 
@@ -288,10 +304,9 @@ a {
     margin: 0;
 }
 
-@media screen and (min-width:481px) and (max-width:793px) {
+@media screen and (min-width:320px) and (max-width:793px) {
     .copyright p {
         font-size: 0.7em;
-
     }
 }
 
@@ -313,7 +328,7 @@ a {
     transform: scale(1.15);
 }
 
-@media screen and (min-width:481px) and (max-width:793px) {
+@media screen and (min-width:320px) and (max-width:793px) {
     .whatsapp img {
         width: 45px;
         bottom: 80px;
@@ -361,15 +376,22 @@ a {
     border-radius: 5%;
 }
 
-@media screen and (min-width:481px) and (max-width:920px) {
+@media screen and (min-width:320px) and (max-width:920px) {
     .empresa_card {
         display: flex;
         flex-flow: column;
-        margin-bottom: 5%;
     }
 
     .empresa_card_left {
         width: 100%;
+    }
+
+    .empresa_card_left h4{
+        font-size: 1.6em;
+    }
+
+    .empresa_card_left p{
+        font-size: 1em;
     }
 
     .empresa_card_right {
@@ -446,9 +468,9 @@ a {
     }
 }
 
-@media only screen and (min-width:481px) and (max-width:1024px) {
+@media only screen and (min-width:320px) and (max-width:1024px) {
     .galeria_grid {
-        margin-bottom: 7%;
+        margin-bottom: 17%;
         grid-template-columns: repeat(2, 50vw)
     }
 
@@ -506,7 +528,11 @@ a {
     padding-bottom: 3%;
 }
 
-@media only screen and (min-width:481px) and (max-width:1024px) {
+@media only screen and (min-width:320px) and (max-width:1024px) {
+    h4 {
+        text-align: center;
+    }
+    
     .productos {
         display: flex;
         flex-flow: column;
@@ -517,7 +543,7 @@ a {
     .productos__card {
         width: 100%;
         margin-top: 5%;
-        margin-bottom: 9%;
+        margin-bottom: 17%;
         border: lemonchiffon solid 1px;
     }
 }
@@ -570,7 +596,7 @@ td {
     padding: 1%;
 }
 
-@media screen and (min-width:481px) and (max-width:793px) {
+@media screen and (min-width:320px) and (max-width:793px) {
     .nutricional {
         display: flex;
         flex-flow: column;
@@ -579,6 +605,7 @@ td {
         .nutricional__card {
             width: 100%;
             margin-top: 5%;
+            margin-bottom: 15%;
         }
 }
 
@@ -645,6 +672,30 @@ form label {
     transform: scale(1.15);
 }
 
+@media screen and (min-width:320px) and (max-width:793px) {
+
+    form input {
+        font-size: 15px;
+
+    }
+    
+    form textarea {
+        font-size: 15px;
+    }
+    
+    form label {
+        font-size: 18px;
+    }
+
+    #enviar {
+        font-size: 14px;
+}
+
+    #resetear {
+    font-size: 14px;
+}
+
+}
 /******************************* MODO DE CONSERVACION ****************************/
 
 #modo_conservacion {
@@ -670,4 +721,18 @@ form label {
     width: 6%;
     height: auto;
     margin-bottom: 3%;
+}
+
+@media screen and (min-width:320px) and (max-width:793px) {
+    
+    #modo_conservacion {
+        margin-top: 8%;
+    }
+    .instrucciones {
+        margin-bottom: 17%;
+    }
+
+    .instrucciones_card img {
+        display: none;
+    }
 }
