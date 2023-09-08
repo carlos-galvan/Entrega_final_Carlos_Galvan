@@ -1,0 +1,16 @@
+/******************************* INDEX.HTML ****************************/
+.carousel {
+    margin-top: 2%;
+}
+
+.carousel-item img {
+    border-radius: 10%;
+    border: lemonchiffon solid 5px;
+}
+
+@media screen and (min-width:320px) and (max-width:793px) {
+    .carousel {
+        margin-top: 4%;
+    }
+}
+

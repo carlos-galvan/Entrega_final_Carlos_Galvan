@@ -1,0 +1,127 @@
+/******************************* PEDIDOS.HTML ****************************/
+
+form {
+    border: lemonchiffon solid 3px;
+    border-radius: 3%;
+    margin-top: 2%;
+    padding: 1%;
+    width: 80%;
+}
+
+form input {
+    width: 100%;
+    font-size: 25px;
+    color: sandybrown;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+form textarea {
+    width: 100%;
+    font-size: 25px;
+    color: sandybrown;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+form label {
+    font-size: 28px;
+    color: lemonchiffon;
+    font-style: oblique;
+    font-weight: 800;
+}
+
+#enviar {
+    width: 25%;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: italic;
+    border: rgb(95, 95, 95) 3px solid;
+    border-radius: 25px;
+    margin-top: 1%;
+    transition: all 0.3s;
+}
+
+#enviar:hover {
+    transform: scale(1.15);
+}
+
+#resetear {
+    width: 25%;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: italic;
+    border: rgb(96, 96, 96) 3px solid;
+    border-radius: 25px;
+    margin-top: 1%;
+    transition: all 0.3s;
+}
+
+#resetear:hover {
+    transform: scale(1.15);
+}
+
+@media screen and (min-width:320px) and (max-width:793px) {
+
+    form input {
+        font-size: 15px;
+
+    }
+    
+    form textarea {
+        font-size: 15px;
+    }
+    
+    form label {
+        font-size: 18px;
+    }
+
+    #enviar {
+        font-size: 14px;
+}
+
+    #resetear {
+    font-size: 14px;
+}
+
+}
+/******************************* MODO DE CONSERVACION ****************************/
+
+#modo_conservacion {
+    margin-top: 3%;
+}
+
+.instrucciones {
+    width: 75%;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 3%;
+}
+
+.instrucciones_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.instrucciones_card img {
+    width: 6%;
+    height: auto;
+    margin-bottom: 3%;
+}
+
+@media screen and (min-width:320px) and (max-width:793px) {
+    
+    #modo_conservacion {
+        margin-top: 8%;
+    }
+    .instrucciones {
+        margin-bottom: 17%;
+    }
+
+    .instrucciones_card img {
+        display: none;
+    }
+}

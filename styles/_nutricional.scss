@@ -1,0 +1,60 @@
+/******************************* NUTRICIONAL.HTML ****************************/
+.nutricional {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-bottom: 3%;
+}
+
+.nutricional__card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.nutricional__card img {
+    width: 80%;
+    border: lemonchiffon solid 4px;
+    border-radius: 8%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    transition: all 0.3s;
+}
+
+.nutricional__card img:hover {
+    transform: scale(1.08);
+}
+
+
+.nutricional__card p {
+    width: 90%;
+    text-align: center;
+}
+
+table {
+    width: 70%;
+    text-align: center;
+}
+
+th,
+td {
+    border-bottom: grey solid 1px;
+    padding: 1%;
+}
+
+@media screen and (min-width:320px) and (max-width:793px) {
+    .nutricional {
+        display: flex;
+        flex-flow: column;
+        margin-bottom: 8%;
+    }
+        .nutricional__card {
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 15%;
+        }
+}
+
