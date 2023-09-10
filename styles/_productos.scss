@@ -27,6 +27,10 @@
     padding-bottom: 3%;
 }
 
+.animate__animated {
+    animation-duration: 7s;
+}
+
 @media only screen and (min-width:320px) and (max-width:1024px) {
     h4 {
         text-align: center;

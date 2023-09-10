@@ -148,11 +148,18 @@ a {
 }
 
 .empresa_card_right img {
-  width: 80%;
+  width: 70%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: lemonchiffon solid 7px;
+  border: rgba(0, 0, 0, 0) solid 7px;
   border-radius: 5%;
+  filter: grayscale(100%);
+  transition: all 0.2s;
+}
+
+.empresa_card_right img:hover {
+  filter: grayscale(0%) saturate(200%);
+  border: lemonchiffon solid 7px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 920px) {
@@ -180,25 +187,33 @@ a {
 }
 
 .galeria_grid {
-  width: 100%;
-  margin-bottom: 3%;
+  width: 85%;
   display: grid;
-  justify-content: space-between;
+  justify-content: space-evenly;
   grid-template-columns: repeat(3, 32vw);
 }
 
+.galeria_grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .galeria_grid img {
-  width: 90%;
-  height: 95%;
+  width: 85%;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: lemonchiffon solid 5px;
+  border: lemonchiffon solid 3px;
   border-radius: 10%;
+  filter: sepia(60%);
   transition: all 0.3s;
 }
 
 .galeria_grid img:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
+  filter: sepia(0%);
+  border: lemonchiffon solid 7px;
 }
 
 /*grid-row-start/grid-column-start/grid-row-end/grid-column-end*/
@@ -244,7 +259,6 @@ a {
     margin-bottom: 17%;
     grid-template-columns: repeat(2, 50vw);
   }
-  /*grid-row-start/grid-column-start/grid-row-end/grid-column-end*/
   .pic1 {
     grid-area: 1/1/2/2;
   }
@@ -261,117 +275,29 @@ a {
     grid-area: 4/1/5/3;
   }
 }
-/******************************* FOOTER ****************************/
-.footer {
+/******************************* BREADCRUMBS ****************************/
+.breadcrumb ul {
   width: 100%;
-  height: auto;
   display: flex;
-  flex-wrap: row wrap;
-  justify-content: space-evenly;
-  margin-bottom: 3%;
+  justify-content: center;
+  padding: 10px 16px;
+  list-style: none;
 }
 
-.footer_card {
-  width: 30%;
-  height: auto;
-  padding-top: 2%;
-  text-align: center;
+.breadcrumb li {
+  font-size: 1em;
+  padding: 0px 5px;
 }
 
-.footer_card a {
-  font-size: 1.2em;
+.breadcrumb a {
+  color: grey;
+  font-size: 1em;
+}
+
+.breadcrumb a:hover {
   color: lemonchiffon;
 }
 
-.footer_card p {
-  font-size: 1.5em;
-  font-family: Verdana, sans-serif;
-  font-weight: 600;
-  color: rgb(168, 168, 168);
-}
-
-@media screen and (min-width: 320px) and (max-width: 793px) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-  }
-  .footer_card {
-    width: 100%;
-  }
-  .footer_card a {
-    font-size: 1em;
-  }
-  .footer_card p {
-    font-size: 1.1em;
-    padding-top: 3%;
-  }
-}
-/******************************* FOOTER - UBICACION ****************************/
-.iframe {
-  width: 70%;
-  height: 70%;
-  transition: all 0.3s;
-}
-
-.iframe:hover {
-  transform: scale(1.15);
-}
-
-/******************************* FOOTER - AYUDA ****************************/
-.footer_card_ayuda {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footer_card_ayuda li {
-  list-style-type: none;
-  font-size: 1.3em;
-  padding: 1%;
-  /* text-align: center; */
-  transition: all 0.3s;
-}
-
-.footer_card_ayuda li:hover {
-  transform: scale(1.15);
-}
-
-/******************************* FOOTER - REDES ****************************/
-.footer_card_redes {
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.footer_card_redes a img {
-  width: 60px;
-  transition: all 0.3s;
-}
-
-.footer_card_redes a img:hover {
-  transform: scale(1.25);
-}
-
-.social_media_top_icons {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.social_media_bottom_icons {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-@media screen and (min-width: 320px) and (max-width: 793px) {
-  .footer_card_redes {
-    width: 100%;
-    height: 120px;
-  }
-  .footer_card_redes a img {
-    width: 35px;
-  }
-}
 /******************************* COPYRIGHT ****************************/
 .copyright {
   display: flex;
@@ -399,7 +325,7 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   position: fixed;
-  bottom: 35px;
+  bottom: 45px;
   right: 15px;
   z-index: 1;
   cursor: pointer;
@@ -407,7 +333,7 @@ a {
 }
 
 .whatsapp img:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
 @media screen and (min-width: 320px) and (max-width: 793px) {
@@ -431,6 +357,117 @@ a {
     margin-top: 4%;
   }
 }
+/******************************* INDEX FOOTER ****************************/
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-evenly;
+  margin-bottom: 3%;
+}
+
+.footer_card {
+  width: 30%;
+  height: auto;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.footer_card a {
+  font-size: 1em;
+  color: lemonchiffon;
+}
+
+.footer_card p {
+  font-size: 1.5em;
+  font-family: Verdana, sans-serif;
+  font-weight: 600;
+  color: rgb(168, 168, 168);
+}
+
+@media screen and (min-width: 320px) and (max-width: 793px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_card {
+    width: 100%;
+  }
+  .footer_card a {
+    font-size: 1em;
+  }
+  .footer_card p {
+    font-size: 1.1em;
+    padding-top: 3%;
+  }
+}
+/******************************* UBICACION ****************************/
+.iframe {
+  width: 70%;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.iframe:hover {
+  transform: scale(1.15);
+}
+
+/******************************* AYUDA ****************************/
+.footer_card_ayuda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer_card_ayuda li {
+  list-style-type: none;
+  font-size: 1.3em;
+  padding: 1%;
+  /* text-align: center; */
+  transition: all 0.3s;
+}
+
+.footer_card_ayuda li:hover {
+  transform: scale(1.2);
+}
+
+/******************************* REDES ****************************/
+.footer_card_redes {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer_card_redes a img {
+  width: 50px;
+  transition: all 0.5s;
+}
+
+.footer_card_redes a img:hover {
+  transform: scale(1.25);
+}
+
+.social_media_top_icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social_media_bottom_icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 320px) and (max-width: 793px) {
+  .footer_card_redes {
+    width: 100%;
+    height: 120px;
+  }
+  .footer_card_redes a img {
+    width: 35px;
+  }
+}
 /******************************* NAVBAR *******************************/
 .nav-link {
   text-align: center;
@@ -439,6 +476,7 @@ a {
 
 .nav-link:hover {
   transform: scale(1.15);
+  color: lemonchiffon !important;
 }
 
 @media screen and (min-width: 320px) and (max-width: 793px) {
@@ -609,6 +647,59 @@ form label {
   margin-bottom: 3%;
 }
 
+#freezer {
+  animation-name: efecto1;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-direction: normal;
+}
+
+@keyframes efecto1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-450px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-200px);
+  }
+}
+#tostadora {
+  animation-name: efecto2;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-delay: 0.5s;
+}
+
+@keyframes efecto2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-450px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-200px);
+  }
+}
+#cubiertos {
+  animation-name: efecto3;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-delay: 1s;
+}
+
+@keyframes efecto3 {
+  0% {
+    opacity: 0;
+    transform: translateX(-450px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-200px);
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 793px) {
   #modo_conservacion {
     margin-top: 8%;
@@ -648,6 +739,10 @@ form label {
      object-fit: cover;
   padding-top: 2%;
   padding-bottom: 3%;
+}
+
+.animate__animated {
+  animation-duration: 7s;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1024px) {

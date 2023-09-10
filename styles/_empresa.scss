@@ -1,5 +1,4 @@
 /******************************* EMPRESA.HTML ****************************/
-
 .empresa_card {
     display: flex;
     flex-flow: row nowrap;
@@ -33,10 +32,17 @@
 }
 
 .empresa_card_right img {
-    width: 80%;
+    width: 70%;
     object-fit: cover;
-    border: lemonchiffon solid 7px;
+    border: rgba(0, 0, 0, 0)solid 7px;
     border-radius: 5%;
+    filter: grayscale(100%);
+    transition: all 0.2s;
+}
+
+.empresa_card_right img:hover {
+    filter: grayscale(0%) saturate(200%);
+    border: lemonchiffon solid 7px ;
 }
 
 @media screen and (min-width:320px) and (max-width:920px) {
@@ -49,11 +55,11 @@
         width: 100%;
     }
 
-    .empresa_card_left h4{
+    .empresa_card_left h4 {
         font-size: 1.6em;
     }
 
-    .empresa_card_left p{
+    .empresa_card_left p {
         font-size: 1em;
     }
 
@@ -61,6 +67,7 @@
         display: none;
     }
 }
+
 /******************************* GALERIA ****************************/
 #galeria {
     margin-top: 0;
@@ -68,25 +75,32 @@
 }
 
 .galeria_grid {
-    width: 100%;
-    margin-bottom: 3%;
+    width: 85%;
     display: grid;
-    justify-content: space-between;
+    justify-content: space-evenly;
     grid-template-columns: repeat(3, 32vw)
 }
 
-.galeria_grid img {
+.galeria_grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    width: 90%;
-    height: 95%;
+.galeria_grid img {
+    width: 85%;
+    height: 80%;
     object-fit: cover;
-    border: lemonchiffon solid 5px;
+    border: lemonchiffon solid 3px;
     border-radius: 10%;
+    filter:sepia(60%);
     transition: all 0.3s;
 }
 
 .galeria_grid img:hover {
-    transform: scale(1.10);
+    transform: scale(1.07);
+    filter: sepia(0%);
+    border: lemonchiffon solid 7px;
 }
 
 /*grid-row-start/grid-column-start/grid-row-end/grid-column-end*/
@@ -135,8 +149,6 @@
         grid-template-columns: repeat(2, 50vw)
     }
 
-    /*grid-row-start/grid-column-start/grid-row-end/grid-column-end*/
-
     .pic1 {
         grid-area: 1/1/2/2;
     }
@@ -158,6 +170,3 @@
     }
 
 }
-
-
-

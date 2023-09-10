@@ -4,10 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="La misión de BA PROTEIN es elaborar waffles proteicos de alto valor nutricional y fomentar el cuidado de la salud a través de una alimentación saludable. ">
+    <meta name="keywords" content="waffles receta, receta de waffles, waffles dulces, waffles de avena, panqueques, pancakes, masa para waffles, crepes, recetas con avena,
+    alimentos proteicos, comidas proteicas, recetas saludables">
     <!-- BOOTSTRAP INICIA -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- BOOTSTRAP FINALIZA -->
+    <!-- AOS ANIMATION INICIA -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS ANIMATION FINALIZA -->
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="shortcut icon" href="../images/waffle.png">
     <title>Empresa</title>
@@ -19,7 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand">
-                    <img src="../images/icon.jpg" alt="company logo" style="width:110px;" class="rounded-pill">                     
+                    <img src="../images/icon.jpg" alt="company logo" style="width:110px;" class="rounded-pill">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
@@ -51,7 +58,7 @@
 
     <main>
         <!--MAIN INICIA-->
-        <h3>NUESTRA EMPRESA</h3>
+        <h3 data-aos="zoom-out" data-aos-duration="500">NUESTRA EMPRESA</h3>
         <section class="empresa_card">
             <div class="empresa_card_left">
                 <h4>Sobre la empresa</h4>
@@ -70,7 +77,7 @@
                 <h4>Nuestra Misión</h4>
                 <p>Elaborar un producto de alto valor nutricional y fomentar el cuidado de la salud a
                     través de una
-                    alimentación saludable. Nuestro compromiso es contribuir a cubrir el requerimiento energético 
+                    alimentación saludable. Nuestro compromiso es contribuir a cubrir el requerimiento energético
                     para las actividades diarias. </p>
 
                 <h4>Nuestra Visión</h4>
@@ -86,39 +93,52 @@
             <div class="empresa_card_right">
                 <img src="../images/empresa_pack.jpeg" alt="Pack">
             </div>
+            </div>
         </section>
         <!--MAIN FINALIZA-->
 
         <!--GALERIA GRID INICIA-->
-        <h3 id="galeria" >GALERÍA DE FOTOS</h3>
-        <section class="galeria_grid mx-auto">
-            <div class="pic1"> <img src="../images/galeria1.jpg" alt="waffle"></div>
-            <div class="pic2"> <img src="../images/galeria2.jpg" alt="waffle"></div>
-            <div class="pic3"> <img src="../images/galeria3.jpg" alt="waffle"></div>
-            <div class="pic4"> <img src="../images/galeria4.jpg" alt="waffle"></div>
-            <div class="pic5"> <img src="../images/galeria5.jpg" alt="waffle"></div>
-            <div class="pic6"> <img src="../images/galeria6.jpg" alt="waffle"></div>
-            <div class="pic7"> <img src="../images/galeria7.jpg" alt="waffle"></div>
-            <div class="pic8"> <img src="../images/galeria8.jpg" alt="waffle"></div>
-        </section>
+        <div data-aos="zoom-in-up" data-aos-duration="2000">
+            <h3 id="galeria">GALERÍA DE FOTOS</h3>
+            <section class="galeria_grid mx-auto">
+                <div class="pic1"> <img src="../images/galeria1.jpg" alt="waffle"></div>
+                <div class="pic2"> <img src="../images/galeria2.jpg" alt="waffle"></div>
+                <div class="pic3"> <img src="../images/galeria3.jpg" alt="waffle"></div>
+                <div class="pic4"> <img src="../images/galeria4.jpg" alt="waffle"></div>
+                <div class="pic5"> <img src="../images/galeria5.jpg" alt="waffle"></div>
+                <div class="pic6"> <img src="../images/galeria6.jpg" alt="waffle"></div>
+                <div class="pic7"> <img src="../images/galeria7.jpg" alt="waffle"></div>
+                <div class="pic8"> <img src="../images/galeria8.jpg" alt="waffle"></div>
+            </section>
+        </div>
         <!--GALERIA GRID FINALIZA-->
     </main>
-
     <footer>
-        <!--WHATSAPP LOGO-->
-        <div class="whatsapp">
-            <img src="../images/whatsapp.png" alt="whatsapp">
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li>Empresa</li>
+                <li><a href="../pages/productos.html">Productos</a></li>
+                <li><a href="../pages/nutricional.html">Nutricional</a></li>
+                <li><a href="../pages/pedidos.html">Pedidos</a></li>
+            </ul>
         </div>
-
         <!--COPYRIGHT-->
         <div class="copyright fixed-bottom">
             <p>Diseñado por Carlos Galván para proyecto final del curso 'Desarrollo Web' de Coderhouse, 2023. Todos los
                 derechos reservados</p><br>
         </div>
+        <!--WHATSAPP LOGO-->
+        <div class="whatsapp">
+            <img src="../images/whatsapp.png" alt="whatsapp">
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script>
 </body>
 
 </html>

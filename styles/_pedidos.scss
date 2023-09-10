@@ -110,7 +110,68 @@ form label {
     width: 6%;
     height: auto;
     margin-bottom: 3%;
+    // animation-name: efecto;
+    // animation-timing-function:linear;
+    // animation-duration: 3s;
+    // animation-direction: normal;
 }
+
+#freezer {
+    animation-name: efecto1;
+    animation-timing-function:linear;
+    animation-duration: 2s;
+    animation-direction: normal;
+} 
+
+@keyframes efecto1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-450px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-200px);
+    }
+}
+
+#tostadora {
+    animation-name: efecto2;
+    animation-timing-function:linear;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-delay: 0.5s;
+} 
+
+@keyframes efecto2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-450px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-200px);
+    }
+}
+
+#cubiertos {
+    animation-name: efecto3;
+    animation-timing-function:linear;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-delay: 1s;
+} 
+
+@keyframes efecto3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-450px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-200px);
+    }
+}
+
 
 @media screen and (min-width:320px) and (max-width:793px) {
     
