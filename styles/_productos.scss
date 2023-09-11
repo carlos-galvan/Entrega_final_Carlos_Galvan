@@ -1,4 +1,7 @@
 /******************************* PRODUCTOS.HTML ****************************/
+$maincolor:lemonchiffon;
+$totalwidth:100%;
+
 .descripcion {
     width: 96%;
     text-align: justify;
@@ -6,7 +9,7 @@
 }
 
 .productos {
-    width: 100%;
+    width: $totalwidth;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -15,7 +18,7 @@
 
 .productos__card {
     width: 30%;
-    border: lemonchiffon solid 2px;
+    border: $maincolor solid 2px;
     text-align: center;
     padding: 1%;
 }
@@ -28,7 +31,7 @@
 }
 
 .animate__animated {
-    animation-duration: 7s;
+    animation-duration: 8s;
 }
 
 @media only screen and (min-width:320px) and (max-width:1024px) {
@@ -44,9 +47,10 @@
     }
 
     .productos__card {
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 17%;
-        border: lemonchiffon solid 1px;
+        width: $totalwidth;
+        margin-top: 2%;
+        margin-bottom: 10%;
+        border: none;
+        border-bottom: $maincolor solid 1px;
     }
 }

@@ -1,11 +1,14 @@
 /******************************* INDEX.HTML ****************************/
+$maincolor:lemonchiffon;
+$totalwidth: 100%;
+
 .carousel {
     margin-top: 2%;
 }
 
 .carousel-item img {
     border-radius: 10%;
-    border: lemonchiffon solid 5px;
+    border: $maincolor solid 5px;
 }
 
 @media screen and (min-width:320px) and (max-width:793px) {
@@ -15,7 +18,7 @@
 }
 /******************************* INDEX FOOTER ****************************/
 .footer {
-    width: 100%;
+    width: $totalwidth;
     height: auto;
     display: flex;
     flex-wrap: row wrap;
@@ -32,7 +35,7 @@
 
 .footer_card a {
     font-size: 1em;
-    color: lemonchiffon;
+    color: $maincolor;
 }
 
 .footer_card p {
@@ -49,7 +52,7 @@
     }
 
     .footer_card {
-        width: 100%;
+        width: $totalwidth;
     }
 
     .footer_card a {
@@ -113,13 +116,12 @@
 }
 
 .social_media_bottom_icons {
-    display: flex;
-    justify-content: space-evenly;
+    @extend .social_media_top_icons;
 }
 
 @media screen and (min-width:320px) and (max-width:793px) {
     .footer_card_redes {
-        width: 100%;
+        width: $totalwidth;
         height: 120px;
     }
 

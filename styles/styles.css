@@ -181,11 +181,6 @@ a {
   }
 }
 /******************************* GALERIA ****************************/
-#galeria {
-  margin-top: 0;
-  margin-bottom: 3%;
-}
-
 .galeria_grid {
   width: 85%;
   display: grid;
@@ -251,22 +246,37 @@ a {
 
 @media only screen and (min-width: 793px) and (max-width: 1024px) {
   .galeria_grid {
-    margin-bottom: 5%;
+    margin-top: 1%;
+  }
+  .pic3 {
+    display: none;
+  }
+  .pic6 {
+    display: none;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
   .galeria_grid {
-    margin-bottom: 17%;
     grid-template-columns: repeat(2, 50vw);
   }
+  /*grid-row-start/grid-column-start/grid-row-end/grid-column-end*/
   .pic1 {
     grid-area: 1/1/2/2;
   }
   .pic2 {
     grid-area: 1/2/2/3;
   }
+  .pic3 {
+    display: none;
+  }
   .pic4 {
     grid-area: 2/1/3/2;
+  }
+  .pic5 {
+    grid-area: 2/2/3/3;
+  }
+  .pic6 {
+    display: none;
   }
   .pic7 {
     grid-area: 3/1/4/3;
@@ -449,12 +459,7 @@ a {
   transform: scale(1.25);
 }
 
-.social_media_top_icons {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.social_media_bottom_icons {
+.social_media_top_icons, .social_media_bottom_icons {
   display: flex;
   justify-content: space-evenly;
 }
@@ -490,7 +495,7 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 
 .nutricional__card {
@@ -534,12 +539,12 @@ td {
   .nutricional {
     display: flex;
     flex-flow: column;
-    margin-bottom: 8%;
+    margin-bottom: 3%;
   }
   .nutricional__card {
     width: 100%;
-    margin-top: 5%;
-    margin-bottom: 15%;
+    margin-top: 3%;
+    margin-bottom: 1%;
   }
 }
 /******************************* PEDIDOS.HTML ****************************/
@@ -551,7 +556,7 @@ form {
   width: 80%;
 }
 
-form input {
+input, textarea {
   width: 100%;
   font-size: 25px;
   color: sandybrown;
@@ -559,22 +564,14 @@ form input {
   border-bottom: 2px solid #ffffff;
 }
 
-form textarea {
-  width: 100%;
-  font-size: 25px;
-  color: sandybrown;
-  border: none;
-  border-bottom: 2px solid #ffffff;
-}
-
-form label {
+label {
   font-size: 28px;
   color: lemonchiffon;
   font-style: oblique;
   font-weight: 800;
 }
 
-#enviar {
+#enviar, #resetear {
   width: 25%;
   font-size: 25px;
   font-weight: 800;
@@ -585,19 +582,8 @@ form label {
   transition: all 0.3s;
 }
 
-#enviar:hover {
+#enviar:hover, #resetear:hover {
   transform: scale(1.15);
-}
-
-#resetear {
-  width: 25%;
-  font-size: 25px;
-  font-weight: 800;
-  font-style: italic;
-  border: rgb(96, 96, 96) 3px solid;
-  border-radius: 25px;
-  margin-top: 1%;
-  transition: all 0.3s;
 }
 
 #resetear:hover {
@@ -605,7 +591,7 @@ form label {
 }
 
 @media screen and (min-width: 320px) and (max-width: 793px) {
-  form input {
+  form input, form textarea {
     font-size: 15px;
   }
   form textarea {
@@ -614,7 +600,7 @@ form label {
   form label {
     font-size: 18px;
   }
-  #enviar {
+  #enviar, #resetear {
     font-size: 14px;
   }
   #resetear {
@@ -630,7 +616,6 @@ form label {
   width: 75%;
   display: flex;
   flex-flow: column;
-  margin-bottom: 3%;
 }
 
 .instrucciones_card {
@@ -650,24 +635,24 @@ form label {
 #freezer {
   animation-name: efecto1;
   animation-timing-function: linear;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-direction: normal;
 }
 
 @keyframes efecto1 {
   0% {
     opacity: 0;
-    transform: translateX(-450px);
+    transform: translateX(-600px);
   }
   50% {
     opacity: 0.5;
-    transform: translateX(-200px);
+    transform: translateX(-300px);
   }
 }
 #tostadora {
   animation-name: efecto2;
   animation-timing-function: linear;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-direction: normal;
   animation-delay: 0.5s;
 }
@@ -675,17 +660,17 @@ form label {
 @keyframes efecto2 {
   0% {
     opacity: 0;
-    transform: translateX(-450px);
+    transform: translateX(-600px);
   }
   50% {
     opacity: 0.5;
-    transform: translateX(-200px);
+    transform: translateX(-300px);
   }
 }
 #cubiertos {
   animation-name: efecto3;
   animation-timing-function: linear;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-direction: normal;
   animation-delay: 1s;
 }
@@ -693,19 +678,23 @@ form label {
 @keyframes efecto3 {
   0% {
     opacity: 0;
-    transform: translateX(-450px);
+    transform: translateX(-600px);
   }
   50% {
     opacity: 0.5;
-    transform: translateX(-200px);
+    transform: translateX(-300px);
   }
 }
 @media screen and (min-width: 320px) and (max-width: 793px) {
+  form {
+    width: 95%;
+  }
   #modo_conservacion {
     margin-top: 8%;
   }
   .instrucciones {
-    margin-bottom: 17%;
+    width: 90%;
+    margin-bottom: 5%;
   }
   .instrucciones_card img {
     display: none;
@@ -742,7 +731,7 @@ form label {
 }
 
 .animate__animated {
-  animation-duration: 7s;
+  animation-duration: 8s;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
@@ -757,8 +746,9 @@ form label {
   }
   .productos__card {
     width: 100%;
-    margin-top: 5%;
-    margin-bottom: 17%;
-    border: lemonchiffon solid 1px;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    border: none;
+    border-bottom: lemonchiffon solid 1px;
   }
 }/*# sourceMappingURL=styles.css.map */

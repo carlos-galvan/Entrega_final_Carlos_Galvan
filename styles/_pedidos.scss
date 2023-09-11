@@ -1,32 +1,30 @@
 /******************************* PEDIDOS.HTML ****************************/
+$maincolor:lemonchiffon;
+$totalwidth: 100%;
 
 form {
-    border: lemonchiffon solid 3px;
+    border: $maincolor solid 3px;
     border-radius: 3%;
     margin-top: 2%;
     padding: 1%;
     width: 80%;
 }
 
-form input {
-    width: 100%;
+input {
+    width: $totalwidth;
     font-size: 25px;
     color: sandybrown;
     border: none;
     border-bottom: 2px solid #ffffff;
 }
 
-form textarea {
-    width: 100%;
-    font-size: 25px;
-    color: sandybrown;
-    border: none;
-    border-bottom: 2px solid #ffffff;
+textarea {
+    @extend input;
 }
 
-form label {
+label {
     font-size: 28px;
-    color: lemonchiffon;
+    color: $maincolor;
     font-style: oblique;
     font-weight: 800;
 }
@@ -47,14 +45,7 @@ form label {
 }
 
 #resetear {
-    width: 25%;
-    font-size: 25px;
-    font-weight: 800;
-    font-style: italic;
-    border: rgb(96, 96, 96) 3px solid;
-    border-radius: 25px;
-    margin-top: 1%;
-    transition: all 0.3s;
+    @extend #enviar
 }
 
 #resetear:hover {
@@ -95,7 +86,6 @@ form label {
     width: 75%;
     display: flex;
     flex-flow: column;
-    margin-bottom: 3%;
 }
 
 .instrucciones_card {
@@ -110,34 +100,30 @@ form label {
     width: 6%;
     height: auto;
     margin-bottom: 3%;
-    // animation-name: efecto;
-    // animation-timing-function:linear;
-    // animation-duration: 3s;
-    // animation-direction: normal;
 }
 
 #freezer {
     animation-name: efecto1;
     animation-timing-function:linear;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-direction: normal;
 } 
 
 @keyframes efecto1 {
     0% {
         opacity: 0;
-        transform: translateX(-450px);
+        transform: translateX(-600px);
     }
     50% {
         opacity: 0.5;
-        transform: translateX(-200px);
+        transform: translateX(-300px);
     }
 }
 
 #tostadora {
     animation-name: efecto2;
     animation-timing-function:linear;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-direction: normal;
     animation-delay: 0.5s;
 } 
@@ -145,18 +131,18 @@ form label {
 @keyframes efecto2 {
     0% {
         opacity: 0;
-        transform: translateX(-450px);
+        transform: translateX(-600px);
     }
     50% {
         opacity: 0.5;
-        transform: translateX(-200px);
+        transform: translateX(-300px);
     }
 }
 
 #cubiertos {
     animation-name: efecto3;
     animation-timing-function:linear;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-direction: normal;
     animation-delay: 1s;
 } 
@@ -164,22 +150,28 @@ form label {
 @keyframes efecto3 {
     0% {
         opacity: 0;
-        transform: translateX(-450px);
+        transform: translateX(-600px);
     }
     50% {
         opacity: 0.5;
-        transform: translateX(-200px);
+        transform: translateX(-300px);
     }
 }
 
 
 @media screen and (min-width:320px) and (max-width:793px) {
     
+    form {
+        width: 95%;
+    }
+
     #modo_conservacion {
         margin-top: 8%;
     }
+
     .instrucciones {
-        margin-bottom: 17%;
+        width: 90%;
+        margin-bottom: 5%;
     }
 
     .instrucciones_card img {

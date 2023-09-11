@@ -24,27 +24,31 @@
 }
 
 /******************************* TITULOS Y TEXTO + MEDIA QUERIES ****************************/
+$maintitle: fatface;
+$maincolor: lemonchiffon;
+$aligncenter: center;
+
 h1 {
     margin-top: 13vh;
-    font-family: fatface;
+    font-family: $maintitle;
     font-size: 11em;
     letter-spacing: 0.1em;
     word-spacing: 0.2em;
-    text-align: center;
-    color: lemonchiffon;
+    text-align: $aligncenter;
+    color: $maincolor;
 }
 
 h2 {
     font-family: montserrat;
     padding-top: 1%;
     font-size: 5em;
-    text-align: center;
+    text-align: $aligncenter;
 }
 
 h3 {
     font-family: montserrat;
     margin-top: 13vh;
-    text-align: center;
+    text-align: $aligncenter;
     font-size: 4em;
     padding: 2%;
     letter-spacing: 3px;
@@ -53,7 +57,7 @@ h3 {
 h4 {
     font-family: montserrat;
     font-size: 2em;
-    color: lemonchiffon;
+    color: $maincolor;
 }
 
 p {

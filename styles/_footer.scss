@@ -1,4 +1,6 @@
 /******************************* BREADCRUMBS ****************************/
+$maincolor:lemonchiffon;
+
 .breadcrumb ul {
     width: 100%;
     display: flex;
@@ -18,7 +20,7 @@
 }
 
 .breadcrumb a:hover {
-    color: lemonchiffon;
+    color: $maincolor;
 }
 /******************************* COPYRIGHT ****************************/
 .copyright {
@@ -29,7 +31,7 @@
 
 .copyright p {
     font-size: 1em;
-    color: lemonchiffon;
+    color: $maincolor;
     text-align: center;
     font-style: italic;
     margin: 0;
