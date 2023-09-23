@@ -11,31 +11,39 @@
   font-family: fatface;
   src: url("../fonts/AbrilFatface-Regular.ttf");
 }
+
 @font-face {
   font-family: carter;
   /*Usar solo para el h3 del index*/
   src: url("../fonts/CarterOne-Regular.ttf");
 }
+
 @font-face {
   font-family: montserrat;
   src: url("../fonts/MontserratAlternates-SemiBoldItalic.ttf");
 }
+
 /******************************* TITULOS Y TEXTO + MEDIA QUERIES ****************************/
 h1 {
-  margin-top: 13vh;
+  margin-block-start: 0 !important;
   font-family: fatface;
-  font-size: 11em;
-  letter-spacing: 0.1em;
-  word-spacing: 0.2em;
+  font-size: 10em;
+  letter-spacing: 0.2em;
+  word-spacing: 0.1em;
   text-align: center;
   color: lemonchiffon;
+  color: rgb(249, 243, 185);
+  background-color: transparent;
 }
 
 h2 {
   font-family: montserrat;
   padding-top: 1%;
-  font-size: 5em;
+  font-size: 4em;
+  letter-spacing: 0.1em;
   text-align: center;
+  color: rgb(249, 243, 185);
+  background-color: transparent;
 }
 
 h3 {
@@ -67,53 +75,66 @@ a {
   h1 {
     font-size: 9.5em;
   }
+
   h3 {
     margin-top: 14vh;
   }
 }
+
 @media only screen and (min-width: 1024px) and (max-width: 1134px) {
   h1 {
     font-size: 8em;
     margin-top: 14vh;
   }
+
   h3 {
     margin-top: 15vh;
   }
 }
+
 @media only screen and (min-width: 793px) and (max-width: 1024px) {
   h1 {
     font-size: 6em;
     margin-top: 15vh;
   }
+
   h2 {
     font-size: 4em;
   }
+
   h3 {
     margin-top: 16vh;
   }
+
   p {
     font-size: 1.1em;
   }
 }
+
 @media only screen and (min-width: 320px) and (max-width: 793px) {
   h1 {
     font-size: 3em;
     margin-top: 17vh;
   }
+
   h2 {
     font-size: 2em;
   }
+
   h3 {
     font-size: 1.8em;
     margin-top: 17vh;
   }
+
   h4 {
     font-size: 1.7em;
   }
+
   p {
     font-size: 1em;
   }
 }
+
 /******************************* EMPRESA.HTML ****************************/
 .empresa_card {
   display: flex;
@@ -122,7 +143,7 @@ a {
 }
 
 .empresa_card_left {
-  width: 45%;
+  width: 50%;
   padding-left: 3%;
 }
 
@@ -148,9 +169,10 @@ a {
 }
 
 .empresa_card_right img {
-  width: 70%;
+  height: 80vh;
+  width: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: rgba(0, 0, 0, 0) solid 7px;
   border-radius: 5%;
   filter: grayscale(100%);
@@ -167,19 +189,24 @@ a {
     display: flex;
     flex-flow: column;
   }
+
   .empresa_card_left {
     width: 100%;
   }
+
   .empresa_card_left h4 {
     font-size: 1.6em;
   }
+
   .empresa_card_left p {
     font-size: 1em;
   }
+
   .empresa_card_right {
     display: none;
   }
 }
+
 /******************************* GALERIA ****************************/
 .galeria_grid {
   width: 85%;
@@ -198,7 +225,7 @@ a {
   width: 85%;
   height: 80%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: lemonchiffon solid 3px;
   border-radius: 10%;
   filter: sepia(60%);
@@ -243,47 +270,59 @@ a {
   grid-area: 4/2/5/4;
 }
 
-@media only screen and (min-width: 321px) and (max-width: 1024px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
   .galeria_grid {
     margin-top: 1%;
     grid-template-columns: repeat(2, 50vw);
   }
+
   .pic3 {
     display: none;
   }
+
   .pic6 {
     display: none;
   }
 }
+
 @media only screen and (max-width: 320px) {
   .galeria_grid {
     grid-template-columns: repeat(2, 50vw);
   }
+
   .pic1 {
     grid-area: 1/1/2/2;
   }
+
   .pic2 {
     grid-area: 1/2/2/3;
   }
+
   .pic3 {
     display: none;
   }
+
   .pic4 {
     grid-area: 2/1/3/2;
   }
+
   .pic5 {
     grid-area: 2/2/3/3;
   }
+
   .pic6 {
     display: none;
   }
+
   .pic7 {
     grid-area: 3/1/4/3;
   }
+
   .pic8 {
     grid-area: 4/1/5/3;
   }
 }
+
 /******************************* BREADCRUMBS ****************************/
 .breadcrumb ul {
   width: 100%;
@@ -327,12 +366,13 @@ a {
     font-size: 0.7em;
   }
 }
+
 /******************************* WHATSAPP LOGO ****************************/
 .whatsapp img {
   width: 55px;
   background-color: transparent;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: fixed;
   bottom: 45px;
   right: 15px;
@@ -351,25 +391,62 @@ a {
     bottom: 80px;
   }
 }
-/******************************* INDEX.HTML ****************************/
-.carousel {
-  margin-top: 2%;
+
+/******************************* INDEX HEADER ****************************/
+.carousel-image {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-.carousel-item img {
-  border-radius: 10%;
-  border: lemonchiffon solid 5px;
+.index-img-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.368) 1%, rgba(0, 0, 0, 0.62)), url(../images/index3.jpg);
 }
 
-@media screen and (min-width: 320px) and (max-width: 793px) {
-  .carousel {
-    margin-top: 4%;
+.index-img-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.087) 1%, rgba(0, 0, 0, 0.625)), url(../images/index2.jpg);
+}
+
+.index-img-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.015), rgba(0, 0, 0, 0.648)), url(../images/Index1.jpg);
+}
+
+#main_text {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 38vh;
+  position: absolute;
+  z-index: 1;
+  background: none;
+}
+
+/******************************* INDEX MAIN ****************************/
+#index_main {
+  height: 126vh;
+}
+
+@media screen and (min-width: 320px) and (max-width: 769px) {
+  .carousel-image {
+    height: 65vh;
+  }
+
+  #main_text {
+    padding-top: 30vh;
   }
 }
+
+.text_index {
+  padding: 2% 3%;
+  text-align: center;
+}
+
 /******************************* INDEX FOOTER ****************************/
 .footer {
   width: 100%;
-  height: auto;
   display: flex;
   flex-wrap: row wrap;
   justify-content: space-evenly;
@@ -379,42 +456,17 @@ a {
 .footer_card {
   width: 30%;
   height: auto;
-  padding-top: 2%;
   text-align: center;
 }
 
-.footer_card a {
-  font-size: 1em;
-  color: lemonchiffon;
-}
-
 .footer_card p {
-  font-size: 1.5em;
-  font-family: Verdana, sans-serif;
-  font-weight: 600;
-  color: rgb(168, 168, 168);
+  font-size: 1.2rem;
 }
 
-@media screen and (min-width: 320px) and (max-width: 793px) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-  }
-  .footer_card {
-    width: 100%;
-  }
-  .footer_card a {
-    font-size: 1em;
-  }
-  .footer_card p {
-    font-size: 1.1em;
-    padding-top: 3%;
-  }
-}
 /******************************* UBICACION ****************************/
 .iframe {
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
   transition: all 0.5s;
 }
 
@@ -424,16 +476,14 @@ a {
 
 /******************************* AYUDA ****************************/
 .footer_card_ayuda {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
 }
 
 .footer_card_ayuda li {
   list-style-type: none;
   font-size: 1.3em;
   padding: 1%;
-  /* text-align: center; */
   transition: all 0.3s;
 }
 
@@ -441,16 +491,22 @@ a {
   transform: scale(1.2);
 }
 
+.footer_card a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: lemonchiffon;
+}
+
 /******************************* REDES ****************************/
 .footer_card_redes {
   height: 180px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
 }
 
-.footer_card_redes a img {
-  width: 50px;
+.footer_card_redes img {
+  width: 40px;
   transition: all 0.5s;
 }
 
@@ -458,9 +514,33 @@ a {
   transform: scale(1.25);
 }
 
-.social_media_top_icons, .social_media_bottom_icons {
+.social_media_top_icons,
+.social_media_bottom_icons {
+  width: 18vw;
   display: flex;
   justify-content: space-evenly;
+  padding-top: 5%;
+}
+
+/******************************* MEDIA QUERIES FOR INDEX ****************************/
+@media screen and (min-width: 320px) and (max-width: 793px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_card {
+    width: 100%;
+  }
+
+  .footer_card a {
+    font-size: 1em;
+  }
+
+  .footer_card p {
+    font-size: 1.1em;
+    padding-top: 3%;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 793px) {
@@ -468,11 +548,17 @@ a {
     width: 100%;
     height: 120px;
   }
+
   .footer_card_redes a img {
     width: 35px;
   }
 }
+
 /******************************* NAVBAR *******************************/
+.navbar a {
+  font-size: 1.5rem;
+}
+
 .nav-link {
   text-align: center;
   transition: all 0.3s;
@@ -483,11 +569,21 @@ a {
   color: lemonchiffon !important;
 }
 
-@media screen and (min-width: 320px) and (max-width: 793px) {
+@media screen and (min-width: 320px) and (max-width: 1023px) {
   .navbar-brand img {
     width: 80px !important;
   }
+
+  .navbar-nav li {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav a {
+    text-align: right;
+  }
 }
+
 /******************************* NUTRICIONAL.HTML ****************************/
 .nutricional {
   width: 100%;
@@ -540,48 +636,34 @@ td {
     flex-flow: column;
     margin-bottom: 3%;
   }
+
   .nutricional__card {
     width: 100%;
     margin-top: 3%;
     margin-bottom: 1%;
   }
 }
+
 /******************************* PEDIDOS.HTML ****************************/
-form {
-  border: lemonchiffon solid 3px;
-  border-radius: 3%;
-  margin-top: 2%;
-  padding: 1%;
-  width: 80%;
+.form {
+  border: darkcyan solid 2px;
+  width: 70vw;
 }
 
-input, textarea {
-  width: 100%;
-  font-size: 25px;
-  color: sandybrown;
-  border: none;
-  border-bottom: 2px solid #ffffff;
-}
-
-label {
-  font-size: 28px;
-  color: lemonchiffon;
-  font-style: oblique;
-  font-weight: 800;
-}
-
-#enviar, #resetear {
+#enviar,
+#resetear {
   width: 25%;
   font-size: 25px;
   font-weight: 800;
   font-style: italic;
   border: rgb(95, 95, 95) 3px solid;
   border-radius: 25px;
-  margin-top: 1%;
+  margin-top: 2%;
   transition: all 0.3s;
 }
 
-#enviar:hover, #resetear:hover {
+#enviar:hover,
+#resetear:hover {
   transform: scale(1.15);
 }
 
@@ -590,22 +672,28 @@ label {
 }
 
 @media screen and (min-width: 320px) and (max-width: 793px) {
-  form input, form textarea {
+  form input {
     font-size: 15px;
   }
+
   form textarea {
     font-size: 15px;
   }
+
   form label {
     font-size: 18px;
   }
-  #enviar, #resetear {
+
+  #enviar,
+  #resetear {
     font-size: 14px;
   }
+
   #resetear {
     font-size: 14px;
   }
 }
+
 /******************************* MODO DE CONSERVACION ****************************/
 #modo_conservacion {
   margin-top: 3%;
@@ -643,11 +731,13 @@ label {
     opacity: 0;
     transform: translateX(-600px);
   }
+
   50% {
     opacity: 0.5;
     transform: translateX(-300px);
   }
 }
+
 #tostadora {
   animation-name: efecto2;
   animation-timing-function: linear;
@@ -661,11 +751,13 @@ label {
     opacity: 0;
     transform: translateX(-600px);
   }
+
   50% {
     opacity: 0.5;
     transform: translateX(-300px);
   }
 }
+
 #cubiertos {
   animation-name: efecto3;
   animation-timing-function: linear;
@@ -679,26 +771,32 @@ label {
     opacity: 0;
     transform: translateX(-600px);
   }
+
   50% {
     opacity: 0.5;
     transform: translateX(-300px);
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 793px) {
   form {
     width: 95%;
   }
+
   #modo_conservacion {
     margin-top: 8%;
   }
+
   .instrucciones {
     width: 90%;
     margin-bottom: 5%;
   }
+
   .instrucciones_card img {
     display: none;
   }
 }
+
 /******************************* PRODUCTOS.HTML ****************************/
 .descripcion {
   width: 96%;
@@ -710,21 +808,21 @@ label {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 3%;
 }
 
-.productos__card {
+.productos_card {
   width: 30%;
   border: lemonchiffon solid 2px;
   text-align: center;
   padding: 1%;
 }
 
-.productos__card img {
+.productos_card img {
   width: 75%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   padding-top: 2%;
   padding-bottom: 3%;
 }
@@ -733,21 +831,25 @@ label {
   animation-duration: 8s;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 1024px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   h4 {
     text-align: center;
   }
+
   .productos {
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
     margin-bottom: 3%;
   }
+
   .productos__card {
-    width: 100%;
+    width: 100vw;
     margin-top: 2%;
     margin-bottom: 10%;
     border: none;
     border-bottom: lemonchiffon solid 1px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

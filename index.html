@@ -20,7 +20,6 @@
     <link rel="shortcut icon" href="./images/waffle.png">
     <title>Homepage BA PROTEIN</title>
 </head>
-
 <body>
     <header>
         <!--MENU NAV INICIA-->
@@ -36,19 +35,19 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/empresa.html">EMPRESA</a>
+                            <a class="nav-link" href="./pages/empresa.html">Empresa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/empresa.html#galeria">GALERIA</a>
+                            <a class="nav-link" href="./pages/empresa.html#galeria">Galería</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/productos.html">PRODUCTOS</a>
+                            <a class="nav-link" href="./pages/productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/nutricional.html">NUTRICIONAL</a>
+                            <a class="nav-link" href="./pages/nutricional.html">Nutricional</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/pedidos.html">PEDIDOS</a>
+                            <a class="nav-link" href="./pages/pedidos.html">Pedidos</a>
                         </li>
                     </ul>
                 </div>
@@ -56,40 +55,32 @@
         </nav>
         <!--MENU NAV FINALIZA-->
     </header>
-    <main>
-        <div data-aos="zoom-out" data-aos-duration="1000">
-            <h1>BA PROTEIN</h1>
-        </div>
-        <div data-aos="zoom-out" data-aos-duration="1000">
-            <h2>Waffles proteicos</h2>
-            <!--CARRUSEL BOOTSTRAP INCIA-->
-            <div class="carousel slide carousel-fade w-75 mx-auto" data-bs-ride="carousel">
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./images/Index1.jpg" class="d-block w-100" alt="waffle">
-                        <div class="carousel-caption d-none d-md-block bg-transparent">
-                            <h4>ALIMENTO PROTEICO</h4>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images/index2.jpg" class="d-block w-100" alt="waffle">
-                        <div class="carousel-caption d-none d-md-block bg-transparent">
-                            <h4>BALANCE ENERGETICO</h4>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images/index3.jpg" class="d-block w-100" alt="waffle">
-                        <div class="carousel-caption d-none d-md-block bg-transparent">
-                            <h4>NUTRICION SALUDABLE</h4>
-                        </div>
-                    </div>
+    <main id="index_main">
+        <!-- CARRUSEL BOOTSTRAP INCIA-->
+        <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item  carousel-image index-img-1 active" data-bs-interval="6000"></div>
+                <div class="carousel-item  carousel-image index-img-2" data-bs-interval="6000"></div>
+                <div class="carousel-item  carousel-image index-img-3" data-bs-interval="6000"></div>
+                <div id="main_text">
+                    <h1 data-aos="zoom-in" data-aos-duration="2500" data-aos-delay="500">BA PROTEIN</h1>
+                    <h2 data-aos="flip-up" data-aos-duration="2000" data-aos-delay="900">Waffles proteicos</h2>
                 </div>
-                <!--CARRUSEL BOOTSTRAP FINALIZA-->
             </div>
+        </div>
+        <!--CARRUSEL BOOTSTRAP FINALIZA -->
+        <div class="text_index" data-aos="zoom-in-up" data-aos-delay="1500" data-aos-duration="3000"
+            data-aos-offset="0">
+            <p>Somos BA PROTEIN, un emprendimiento enfocado en la alimentación saludable. En la búsqueda de opciones alimenticias que complementen el entrenamiento físico,
+                observamos que muchos de los alimentos que se etiquetan como “saludables”, están
+                saturados de harinas refinadas, sodio, azúcares, grasas saturadas y conservantes. También por nuestro interés
+                en la nutrición deportiva, entendimos que existe una deficiencia de alimentos proteicos de alto valor
+                biológico y fue por esto que decidimos elaborar nuestra propia receta para crear un alimento sano y proteico... y en forma de waffle!</p>
+        </div>
     </main>
-    <footer>
-        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50" data-aos-offset="0">
+    <footer id="index_footer">
+        <div data-aos="fade-up" data-aos-delay="3000" data-aos-duration="3000" data-aos-offset="0">
             <section class="footer">
                 <!--FOOTER SECCION IFRAME-->
                 <div class="footer_card">
@@ -101,17 +92,17 @@
                 <!--FOOTER SECCION AYUDA-->
                 <div class="footer_card">
                     <p>AYUDA</p><br>
-                    <ul class="footer_card_ayuda">
-                        <li><a href="#">Legales</a></li>
-                        <li><a href="#">Compras</a></li>
-                        <li><a href="#">Devoluciones</a></li>
-                        <li><a href="#">Franquicias</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
+                        <ul class="footer_card_ayuda m-0 p-0">
+                            <li><a href="#">Legales</a></li>
+                            <li><a href="#">Compras</a></li>
+                            <li><a href="#">Devoluciones</a></li>
+                            <li><a href="#">Franquicias</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
                 </div>
                 <!--FOOTER SECCION REDES-->
                 <div class="footer_card">
-                    <p>REDES</p>
+                    <p>REDES</p><br>
                     <div class="footer_card_redes">
                         <div class="social_media_top_icons">
                             <a href="#">
@@ -142,11 +133,11 @@
         <div class="breadcrumb">
             <ul>
                 <li>Inicio</li>
-                <li><a href="./pages/empresa.html">Empresa</a></li>
-                <li><a href="./pages/empresa.html#galeria">Galería</a></li>
-                <li><a href="./pages/productos.html">Productos</a></li>
-                <li><a href="./pages/nutricional.html">Nutricional</a></li>
-                <li><a href="./pages/pedidos.html">Pedidos</a></li>
+                |<li><a href="./pages/empresa.html">Empresa</a></li>
+                |<li><a href="./pages/empresa.html#galeria">Galería</a></li>
+                |<li><a href="./pages/productos.html">Productos</a></li>
+                |<li><a href="./pages/nutricional.html">Nutricional</a></li>
+                |<li><a href="./pages/pedidos.html">Pedidos</a></li>
             </ul>
         </div>
         <!--COPYRIGHT-->

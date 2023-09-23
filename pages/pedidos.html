@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Realice su pedido de waffles proteicos en la ciudad de Buenos Aires utilizando el siguiente formulario: ">
+    <meta name="description"
+        content="Realice su pedido de waffles proteicos en la ciudad de Buenos Aires utilizando el siguiente formulario: ">
     <meta name="keywords" content="waffles receta, receta de waffles, waffles dulces, waffles de avena, panqueques, pancakes, masa para waffles, crepes, recetas con avena,
     alimentos proteicos, comidas proteicas, recetas saludables">
     <!-- BOOTSTRAP INICIA -->
@@ -34,47 +35,68 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">INICIO</a>
+                            <a class="nav-link" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/empresa.html">EMPRESA</a>
+                            <a class="nav-link" href="../pages/empresa.html">Empresa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/empresa.html#galeria">GALERIA</a>
+                            <a class="nav-link" href="../pages/empresa.html#galeria">Galería</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/productos.html">PRODUCTOS</a>
+                            <a class="nav-link" href="../pages/productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/nutricional.html">NUTRICIONAL</a>
+                            <a class="nav-link" href="../pages/nutricional.html">Nutricional</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!--MENU NAV FINALIZA-->
-
         <main>
-            <h3 data-aos="zoom-out" data-aos-duration="500">PEDIDOS</h3>
+            <h3 data-aos="zoom-in" data-aos-duration="1000">PEDIDOS</h3>
             <p class="descripcion">Realizá tu pedido utilizando el siguiente formulario</p>
-
             <!--FORMULARIO INICIA-->
-            <form class="mx-auto" name="" action="enviar.php" method="post" action="text/plain">
-                <div>
-                    <label for="nombre">Nombre y apellido</label>
-                    <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+            <form style="width: 65%"class="mx-auto" data-aos="zoom-in-up" data-aos-duration="2000">
+                <h4>Registrá tu pedido</h4>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Nombre completo</span>
+                    <input type="text" class="form-control" placeholder="Ej. Juan Gómez" aria-label="Username"
+                        aria-describedby="basic-addon1">
                 </div>
-                <div>
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" name="email" placeholder="Ingrese su email" required>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Domicilio para envío</span>
+                    <input type="text" class="form-control" placeholder="Calle y altura" aria-label="Username"
+                        aria-describedby="basic-addon1">
                 </div>
-                <div>
-                    <label for="telefono">Teléfono</label>
-                    <input type="number" name="telefono" placeholder="Ingrese su teléfono" required>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Teléfono</span>
+                    <input type="number" class="form-control" placeholder="Fijo o celular con código de área"
+                        aria-label="Username" aria-describedby="basic-addon1">
                 </div>
-                <div>
-                    <label for="mensaje">Deje su mensaje</label>
-                    <textarea name="mensaje" id="" cols="30" rows="6" placeholder="Ingrese el texto"></textarea>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Seleccioná la variedad </label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Hoy tengo ganas de...</option>
+                        <option value="1">Salado</option>
+                        <option value="2">Chocolate</option>
+                        <option value="3">Vanicanela</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Seleccioná la cantidad de
+                        packs</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Voy a comprar...</option>
+                        <option value="1">1 pack</option>
+                        <option value="2">2 packs</option>
+                        <option value="3">3 packs</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">comentarios</span>
+                    <textare class="form-control" aria-label="With textarea" style="height: 100px"></textarea>
                 </div>
                 <div class="inputs d-flex justify-content-evenly">
                     <input id="enviar" type="submit" value="Enviar">
@@ -82,7 +104,6 @@
                 </div>
             </form>
             <!--FORMULARIO FINALIZA-->
-
             <!--MODO DE CONSERVACIÓN INICIA-->
             <h3 id="modo_conservacion" data-aos="zoom-out" data-aos-duration="500">MODO DE CONSERVACION</h3>
             <section class="instrucciones mx-auto">
@@ -119,11 +140,11 @@
             <div class="breadcrumb">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../pages/empresa.html">Empresa</a></li>
-                    <li><a href="../pages/empresa.html#galeria">Galería</a></li>
-                    <li><a href="../pages/productos.html">Productos</a></li>
-                    <li><a href="../pages/nutricional.html">Nutricional</a></li>
-                    <li>Pedidos</li>
+                    |<li><a href="../pages/empresa.html">Empresa</a></li>
+                    |<li><a href="../pages/empresa.html#galeria">Galería</a></li>
+                    |<li><a href="../pages/productos.html">Productos</a></li>
+                    |<li><a href="../pages/nutricional.html">Nutricional</a></li>
+                    |<li>Pedidos</li>
                 </ul>
             </div>
             <!--COPYRIGHT-->

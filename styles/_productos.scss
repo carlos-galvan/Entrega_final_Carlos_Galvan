@@ -1,6 +1,6 @@
 /******************************* PRODUCTOS.HTML ****************************/
-$maincolor:lemonchiffon;
-$totalwidth:100%;
+$maincolor: lemonchiffon;
+$totalwidth: 100%;
 
 .descripcion {
     width: 96%;
@@ -16,14 +16,14 @@ $totalwidth:100%;
     margin-bottom: 3%;
 }
 
-.productos__card {
+.productos_card {
     width: 30%;
     border: $maincolor solid 2px;
     text-align: center;
     padding: 1%;
 }
 
-.productos__card img {
+.productos_card img {
     width: 75%;
     object-fit: cover;
     padding-top: 2%;
@@ -34,11 +34,11 @@ $totalwidth:100%;
     animation-duration: 8s;
 }
 
-@media only screen and (min-width:320px) and (max-width:1024px) {
+@media only screen and (min-width:320px) and (max-width:768px) {
     h4 {
         text-align: center;
     }
-    
+
     .productos {
         display: flex;
         flex-flow: column;
@@ -47,7 +47,7 @@ $totalwidth:100%;
     }
 
     .productos__card {
-        width: $totalwidth;
+        width: 100vw;
         margin-top: 2%;
         margin-bottom: 10%;
         border: none;

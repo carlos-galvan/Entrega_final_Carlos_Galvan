@@ -3,30 +3,8 @@ $maincolor:lemonchiffon;
 $totalwidth: 100%;
 
 form {
-    border: $maincolor solid 3px;
-    border-radius: 3%;
-    margin-top: 2%;
-    padding: 1%;
-    width: 80%;
-}
-
-input {
-    width: $totalwidth;
-    font-size: 25px;
-    color: sandybrown;
-    border: none;
-    border-bottom: 2px solid #ffffff;
-}
-
-textarea {
-    @extend input;
-}
-
-label {
-    font-size: 28px;
-    color: $maincolor;
-    font-style: oblique;
-    font-weight: 800;
+    display: flex;
+    justify-content: center;
 }
 
 #enviar {
@@ -36,7 +14,7 @@ label {
     font-style: italic;
     border: rgb(95, 95, 95) 3px solid;
     border-radius: 25px;
-    margin-top: 1%;
+    margin-top: 2%;
     transition: all 0.3s;
 }
 
@@ -49,7 +27,7 @@ label {
 }
 
 #resetear:hover {
-    transform: scale(1.15);
+    @extend #enviar:hover
 }
 
 @media screen and (min-width:320px) and (max-width:793px) {
@@ -74,7 +52,6 @@ label {
     #resetear {
     font-size: 14px;
 }
-
 }
 /******************************* MODO DE CONSERVACION ****************************/
 
